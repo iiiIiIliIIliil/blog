@@ -6,7 +6,11 @@
     <body>
         <h1>Hello World!</h1>
         <script type="text/javascript">
-            Object.getOwnPropertyNames(window).forEach(function(v, x) { document.writeln(v); });
+            let props = Object.getOwnPropertyNames(window);
+            let pre = document.createElement('pre');
+            let txt = document.createTextNode(props);
+            pre.appendChild(txt);
+            document.body.append(pre);
         </script>
     </body>
 </html>
