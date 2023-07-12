@@ -8,10 +8,10 @@
         <a href="javascript:goTelegram();">go telegram</a>
         <script>
             function goTelegram() {
-                window.TelegramWebviewProxy.postEvent('web_app_open_link', {
+                window.TelegramWebviewProxy.postEvent('web_app_open_link', JSON.stringify({
                     url: 'https://telegram.org/faq',
                     try_instant_view: true
-                });
+                }));
             }
         </script>
     </body>
