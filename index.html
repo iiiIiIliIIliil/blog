@@ -5,5 +5,12 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <script type="text/javascript">
+            let props = Object.getOwnPropertyNames(window);
+            let pre = document.createElement('pre');
+            let txt = document.createTextNode(props);
+            pre.appendChild(txt);
+            document.body.append(pre);
+        </script>
     </body>
 </html>
