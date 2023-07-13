@@ -8,9 +8,10 @@
         <a href="javascript:tryReadClipboard();">Try read clipboard</a>
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', _json => {
-                let json = JSON.parse(_json);
+                //let json = JSON.parse(_json);
                 let pre = document.createElement('pre');
-                let txt1 = document.createTextNode(json['req_id']);
+                let txt1 = document.createTextNode('received');
+                //let txt1 = document.createTextNode(json['req_id']);
                 //let txt2 = document.createTextNode();
                 pre.appendChild(txt1);
                 document.body.append(pre);    
