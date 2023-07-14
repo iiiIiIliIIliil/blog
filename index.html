@@ -5,11 +5,12 @@
     </head>
     <body>
         <h1>Hello World!!!</h1>
-        <a href="javascript:goTelegram();">go telegram</a>
+        <a href="javascript:openLink('https://telegram.org/faq');">go telegram</a>
+        <a href="javascript:openLink('https://iiiiiiliiiliil.github.io/blog/inner.html#telegram.org/faq');">go external</a>
         <script>
-            function goTelegram() {
+            function openLink(_url) {
                 window.TelegramWebviewProxy.postEvent('web_app_open_link', JSON.stringify({
-                    url: 'https://iiiiiiliiiliil.github.io/blog/inner.html#telegram.org/faq',
+                    url: _url,
                     try_instant_view: true
                 }));
             }
