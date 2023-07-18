@@ -4,6 +4,28 @@
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Hello World!!!!</h1>
+        <a href="javascript:tryReadClipboard();">Try read clipboard</a>
+        <script>
+            window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
+                let pre = document.createElement('pre');
+                let txt1 = document.createTextNode('received');
+                let txt2 = ''
+                if (_json['data'] == undefined) {
+                    txt2 = document.createTextNode(' data is null');
+                } else {
+                    txt2 = document.createTextNode(' ' + _json['data']);
+                }
+                pre.appendChild(txt1);
+                pre.appendChild(txt2);
+                document.body.append(pre);    
+            });
+
+            function tryReadClipboard() {
+                window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
+                    'req_id': 'xxxxxxxxxxxxxxxx'
+                }));
+            }
+        </script>
     </body>
 </html>
