@@ -4,10 +4,9 @@
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-        <a href="javascript:goTelegram();">open link</a>
+        <a href="javascript:openLink();">open link</a>
         <script>
-            function goTelegram() {
+            function openLink() {
                 window.TelegramWebviewProxy.postEvent('web_app_open_link', JSON.stringify({
                     url: 'https://telegram.org/faq',
                     try_instant_view: true
