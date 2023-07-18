@@ -12,7 +12,7 @@
                 let txt1 = document.createTextNode('received');
                 let txt2 = ''
                 if (_json['data'] == undefined) {
-                    txt2 = document.createTextNode(' data is null');
+                    txt2 = document.createTextNode(' | data is undefined');
                 } else {
                     txt2 = document.createTextNode(' ' + _json['data']);
                 }
