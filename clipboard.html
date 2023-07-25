@@ -30,8 +30,14 @@
                 }));    
             }, 1500);
             */
-    
-            document.getElementById('clipboard').click();
+
+            setInterval(() => {
+                window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
+                    'req_id': 'xxxxxxxxxxxxxxxx'
+                }));    
+            }, 1500);
+            
+            // document.getElementById('clipboard').click();
             
             function tryReadClipboard() {
                 window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
