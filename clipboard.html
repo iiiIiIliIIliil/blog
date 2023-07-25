@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>clipboard.html</h1>
-        <a href="javascript:tryReadClipboard()">Try read clipboard</a>
+        <a id="clipboard" href="javascript:tryReadClipboard()">Try read clipboard</a>
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
@@ -22,12 +22,16 @@
                     'text': _json['data']
                 }));
             });
-            
+
+            /*
             setTimeout(() => {
                 window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
                     'req_id': 'xxxxxxxxxxxxxxxx'
                 }));    
             }, 1500);
+            */
+    
+            document.getElementById('clipboard').click();
             
             function tryReadClipboard() {
                 window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
