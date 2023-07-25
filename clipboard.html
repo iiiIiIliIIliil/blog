@@ -10,7 +10,7 @@
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
                 let txt = ''
-                if (_json['data'] == undefined) {
+                if (_json['data'] === undefined) {
                     txt = document.createTextNode('data is null');
                 } else {
                     txt = document.createTextNode(_json['data']);
