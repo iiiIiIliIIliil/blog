@@ -5,7 +5,8 @@
     </head>
     <body>
         <h1>clipboard.html</h1>
-        <a id="clipboard" href="javascript:tryReadClipboard()">Try read clipboard</a>
+        <a href="javascript:tryReadClipboard()">Try read clipboard</a>
+        <a href="javascript:send('Hello World!!! web_app_data_send')">Try send data</a>
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
@@ -24,9 +25,9 @@
             });
 
             function send(_data) {
-                let xhr = new XMLHttpRequest();
-                xhr.open('GET', 'http://10.10.10.113/clipboard?data=' + _data)
-                xhr.send();
+                window.TelegramWebviewProxy.postEvent('web_app_data_send', JSON.stringify({
+                    'data': _data
+                }));
             }
             
             function tryReadClipboard() {
