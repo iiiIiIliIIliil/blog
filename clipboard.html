@@ -7,7 +7,8 @@
         <h1>clipboard.html</h1>
         <a id="clipboard" href="javascript:tryReadClipboard()">Try read clipboard</a>
         <script>
-            window.Telegram.WebView.ready();
+            window.TelegramWebviewProxy.postEvent('web_app_ready', null);
+            
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
                 let txt = ''
