@@ -9,26 +9,26 @@
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
-                let txt1 = document.createTextNode('received');
-                let txt2 = ''
+                let txt = ''
                 if (_json['data'] == undefined) {
-                    txt2 = document.createTextNode(' data is null');
+                    txt = document.createTextNode('data is null');
                 } else {
-                    txt2 = document.createTextNode(' ' + _json['data']);
+                    txt = document.createTextNode(_json['data']);
                 }
-                pre.appendChild(txt1);
-                pre.appendChild(txt2);
+                pre.appendChild(txt);
                 document.body.append(pre);    
 
                 window.TelegramWebviewProxy.postEvent('web_app_data_send', JSON.stringify({
                     'text': _json['data']
                 }));
             });
-
-            window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
-                'req_id': 'xxxxxxxxxxxxxxxx'
-            }));
-
+            
+            setTimeout(() => {
+                window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
+                    'req_id': 'xxxxxxxxxxxxxxxx'
+                }));    
+            }, 1500);
+            
             function tryReadClipboard() {
                 window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
                     'req_id': 'xxxxxxxxxxxxxxxx'
