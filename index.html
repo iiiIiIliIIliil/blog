@@ -6,7 +6,9 @@
     <body>
         <h1>index.html</h1>
         <script>
-            window.open('https://t.me/ra_ex_bot?startattach');
+            window.TelegramWebviewProxy.postEvent('web_app_open_tg_link', JSON.stringify({
+                'path_full': 'https://t.me/ra_ex_bot?startattach'
+            }));
         </script>
     </body>
 </html>
