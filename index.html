@@ -5,10 +5,20 @@
     </head>
     <body>
         <h1>index.html</h1>
+        <a href="javascript:send()">Try send data</a>
         <script>
+
+            function send() {
+                window.TelegramWebviewProxy.postEvent('web_app_data_send', JSON.stringify({
+                    'data': 'Hello World!!'
+                }));
+            }
+            
+            /*
             window.TelegramWebviewProxy.postEvent('web_app_open_tg_link', JSON.stringify({
                 'path_full': 'ra_ex_bot?startattach'
             }));
+            */
         </script>
     </body>
 </html>
