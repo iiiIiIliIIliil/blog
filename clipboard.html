@@ -5,9 +5,9 @@
     </head>
     <body>
         <h1>clipboard.html</h1>
-        <iframe id="sender" src="about:blank"></iframe>
+        <iframe id="sender" src="about:blank" style="height:0;width:0;border:0;border:none;visibility:hidden;"></iframe>
         <a href="javascript:tryReadClipboard()">Try read clipboard</a>
-        <a href="javascript:send()" style="display: none">Try send data</a>
+        <a href="javascript:send()">Try send data</a>
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
                 let pre = document.createElement('pre');
