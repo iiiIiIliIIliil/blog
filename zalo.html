@@ -21,5 +21,34 @@
         <br/>
         <br/>
         <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"ads":{"kind":"html","template_0":"file:fullpage_native_0.html","template_1","file:fullpage_native_0.html","template_2","file:fullpage_native_0.html"}};end;'>ZAdsActivity 06</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href='javascript: goZAdsActivity()'>ZAdsActivity 99</a>
     </body>
+
+    <script>
+        function goZAdsActivity() {
+            let data = {};
+            data['adsInfo'] = {};
+            data['adsInfo']['kind'] = 'html';
+            data['adsRender'] = {};
+            data['adsRender']['kind'] = 'html';
+            data['adsRender']['template_0'] = 'file:fullpage_native_0.html';
+            data['adsRender']['template_1'] = 'file:fullpage_native_0.html';
+            data['adsRender']['template_2'] = 'file:fullpage_native_0.html';
+            data = JSON.stringify(data);
+            
+            let intent = '';
+            intent += 'intent:';
+            intent += '#Intent;';
+            intent += 'component=com.zing.zalo/com.adtima.ads.ZAdsActivity;';
+            intent += 'package=com.zing.zalo;';
+            intent += 'action=android.intent.action.VIEW;';
+            intent += 'S.adsData='
+            intent += data
+            intent += ';end;';
+
+            window.location.href = intent;
+        }
+    </script>
 </html>
