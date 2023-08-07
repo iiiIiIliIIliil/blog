@@ -2,12 +2,13 @@
 <html>
     <head>
     </head>
-    <body>
-        <h1 style="color: white;">temp.html</h1>
+    <body style="color: white;">
+        <h1>temp.html</h1>
         <script type="text/javascript">
-            let props = Object.getOwnPropertyNames(window);
+            let props = Object.getOwnPropertyNames(window.zadsJSInterface);
             let pre = document.createElement('pre');
-            let txt = document.createTextNode(props);
+            let txt = ''
+            props.forEach(prop => txt = txt + prop + '\n');
             pre.appendChild(txt);
             document.body.append(pre);
         </script>
