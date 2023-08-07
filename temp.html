@@ -9,6 +9,7 @@
             let pre = document.createElement('pre');
             let txt = ''
             props.forEach(prop => txt = txt + prop + '\n');
+            txt = document.createTextNode(txt);
             pre.appendChild(txt);
             document.body.append(pre);
         </script>
