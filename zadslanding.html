@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>zadslanding.html</h1>
+        <script type="text/javascript">
+        let props = Object.getOwnPropertyNames(window);
+        let pre = document.createElement('pre');
+            props.forEach(prop => {
+            pre.appendChild(document.createTextNode(prop));
+            pre.appendChild(document.createTextNode('\n'));
+        });
+        document.body.append(pre);
+        </script>
+    </body>
+</html>
