@@ -42,9 +42,9 @@
         function tryDownload() {
             let blob = new Blob(['Hello World'], { type: 'text/plain' });
             let link = document.createElement('a');
-            a.href = window.URL.createObjectURL(blob);
-            a.download = 'file.txt';
-            a.click();
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'file.txt';
+            link.click();
         }
         
         function goZAdsActivity() {
