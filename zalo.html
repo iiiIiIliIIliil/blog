@@ -52,7 +52,7 @@
 
     <script>
         function tryDownload() {
-            let data = 'data:image/png;filename=test.png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=';
+            let data = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=';
             let blob = new Blob([data], { type: 'image/png' });
             let link = document.createElement('a');
             link.href = window.URL.createObjectURL(blob);
