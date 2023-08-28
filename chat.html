@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>zalo.html</h1>
+        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/download">Download (HTTPS) 1</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/ho">Download (HTTPS) 2</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/first/second">Download (HTTPS) 3</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href="data:image/png;filename=/test.png,base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=" download>Download (DATA) 1</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href="javascript:tryDownload();">Download (DATA) 2</a>
+        <br/>
+        <br/>
+        <a style='font-size: 2.0em;' href="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=" download>Download (DATA) 3</a>
+    </body>
+
+    <script>
+        function tryDownload() {
+            let data = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=';
+            let blob = new Blob([data], { type: 'image/png' });
+            let link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = '';
+            link.click();
+        }
+    </script>
+</html>
