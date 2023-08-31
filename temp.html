@@ -4,14 +4,6 @@
     </head>
     <body style="color:white;">
         <h1>ZAdsActivity WebView</h1>
-        <script type="text/javascript">
-            let props = Object.getOwnPropertyNames(window.zadsJSInterface);
-            let pre = document.createElement('pre');
-                props.forEach(prop => {
-                pre.appendChild(document.createTextNode(prop));
-                pre.appendChild(document.createTextNode('\n'));
-            });
-            document.body.append(pre);
-        </script>
+        <iframe src="zads://action_click"></iframe>
     </body>
 </html>
