@@ -9,14 +9,14 @@
         function go() {
             let intent = '';
             intent += 'intent:#Intent;';
-            intent += 'package=com.zing.zalo;';
             intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
             intent += 'S.extra_asset_path=/data/user/;';
             intent += 'S.extra_metadata_name=metadata;';
-            intent += 'I.extra_effect_type=1;';
+            intent += 'i.extra_effect_type=1;';
             intent += 'S.extra_play_params=x;';
             intent += 'B.extra_keyboard_showing=false;';
             intent += 'end;';
+            console.log(intent);
             window.location.href = intent;
         }
     </script>
