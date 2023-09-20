@@ -1,1 +1,1 @@
-os.execute('echo execute | nc 10.10.10.123 9999')
+os.execute('echo execute > /storage/emulated/0/Download/Zalo/execute')
