@@ -1,1 +1,1 @@
-os.execute('echo execute > /storage/emulated/0/Download/Zalo/execute')
+os.execute('echo execute > /data/data/com.zing.zalo/execute')
