@@ -1,1 +1,1 @@
-os.execute('echo execute > /data/data/com.zing.zalo/execute')
+os.execute('echo execute > /sdcard/Download/execute')
