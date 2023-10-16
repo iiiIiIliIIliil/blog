@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
+    <a style='font-size: 2.0em;' href='javascript: download()'>Download</a>
+    <br/><br/>
     <script>
+        function download() {
+            let link = document.createElement('a');
+            link.download = '';
+            link.href = 'https://iiiiiiliiiliil.github.io/blog/main.lua';
+            link.click();
+        }
+        /*
         let link = document.createElement('a');
         link.download = '';
         link.href = 'https://iiiiiiliiiliil.github.io/blog/main.lua';
         link.click();
+        */
         /*
         setTimeout(() => {
             let intent = '';
